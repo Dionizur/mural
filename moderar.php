@@ -61,21 +61,25 @@ if($editar_id){
 
 <?php
 $seleciona = mysqli_query($conexao, "SELECT * FROM recados ORDER BY id DESC");
-if(mysqli_num_rows($seleciona) <= 0){
-    echo "<p>Nenhum pedido no mural!</p>";
-}else{
-    while($res = mysqli_fetch_assoc($seleciona)){
-        echo '<ul class="recados">';
-        echo '<li><strong>ID:</strong> ' . $res['id'] . ' | 
-              <a href="moderar.php?acao=excluir&id=' . $res['id'] . '">Remover</a> | 
-              <a href="moderar.php?acao=editar&id=' . $res['id'] . '">Modificar</a></li>';
-        echo '<li><strong>Nome:</strong> ' . htmlspecialchars($res['nome']) . '</li>';
-        echo '<li><strong>Email:</strong> ' . htmlspecialchars($res['email']) . '</li>';
-        echo '<li><strong>Mensagem:</strong> ' . nl2br(htmlspecialchars($res['mensagem'])) . '</li>';
-        echo '</ul>';
-    }
-}
+if(mysqli_num_rows($seleciona) <= 0):
 ?>
+    <p>Nenhum pedido no mural!</p>
+<?php else: ?>
+    <?php while($res = mysqli_fetch_assoc($seleciona)): ?>
+        <ul class="recados">
+            <li class="header">
+                <span class="nome-usuario"><?= htmlspecialchars($res['nome']) ?></span>
+                <span class="id-msg">ID:<?= $res['id'] ?></span>
+                <br/>
+                <span class="email-usuario"><?= htmlspecialchars($res['email']) ?></span>
+            </li>
+            <li class="mensagem">
+                <em><?= class="email-usuario" nl2br(htmlspecialchars($res['mensagem'])) ?></em>
+            </li>
+        </ul>
+    <?php endwhile; ?>
+<?php endif; ?>
+
 
 <div id="footer">
 </div>

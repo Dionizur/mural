@@ -58,20 +58,62 @@ body {
 }
 
 .recados {
-    width: calc(100% - 20px);
-    margin: 10px auto;
-    border-radius: 8px;
-    border: 1px solid #ff6b6b;
-    background-color: #FFF5F5;
-    padding: 15px;
-    list-style-type: none;
-    transition: all 0.3s ease;
+    background-color: #cce4ff; /* azul claro */
+    border-radius: 15px;
+    padding: 20px 25px;
+    margin: 15px auto;
+    width: calc(100% - 50px);
+    list-style: none;
+    font-family: Verdana, sans-serif;
+    color: #000;
+    position: relative;
 }
 
-.recados:hover {
-    background-color: #FFE6E6;
-    transform: translateY(-2px);
-    box-shadow: 0 3px 8px rgba(255, 0, 0, 0.15);
+/* Cabeçalho da mensagem com nome e id */
+.recados .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 8px;
+}
+
+/* Nome em negrito e maior */
+.nome-usuario {
+    font-weight: bold;
+    font-size: 1.3em;
+    color: #000;
+}
+
+/* ID posicionado no canto direito */
+.id-msg {
+    font-weight: normal;
+    font-size: 0.75em;
+    color: #555;
+}
+
+/* Email em cinza claro e menor */
+.email-usuario {
+    display: block;
+    font-weight: normal;
+    font-size: 0.85em;
+    margin-top: 4px;
+    color: #777777;
+}
+
+/* Mensagem centralizada */
+.mensagem {
+    margin-top: 15px;
+    font-weight: normal;
+    font-size: 1em;
+    line-height: 1.4em;
+    text-align: center;
+    color: #000;
+}
+
+.mensagem em {
+    font-style: normal;
+    font-weight: bold;
+    color: #cc0000; /* destaque vermelho */
 }
 
 #formulario_mural {
