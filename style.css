@@ -1,0 +1,355 @@
+/* ===== Reset global ===== */
+* { 
+    font-family: Verdana, sans-serif; 
+    font-size: 96%; 
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAJElEQVQYlWN4/fr1fwYkoKio+B+ZgcyYDGMDjG0FuhQjM6ADAIKyBTp5OQ9lAAAAAElFTkSuQmCC') repeat;
+    padding: 20px;
+}
+
+/* ===== Estrutura principal ===== */
+#main {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#geral {
+    width: 100%;
+    background: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+/* ===== Cabeçalho ===== */
+#header {
+    width: 100%;
+    height: 81px;
+    background: linear-gradient(to right, #cc0000, #ff6b6b);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom: 2px solid #ff0000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 15px;
+}
+
+#header h1 {
+    font-family: "Trebuchet MS", Tahoma, Verdana, "Agency FB", Arial;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+#header p {
+    font-size: 13px;
+    color: #f0f0f0;
+    margin-top: 5px;
+}
+
+#header a {
+    font-weight: bold;
+    color: #333333;
+}
+
+/* ===== Recados (estilo antigo, mantido) ===== */
+.recados {
+    background-color: #cce4ff;
+    border-radius: 15px;
+    padding: 20px 25px;
+    margin: 15px auto;
+    width: calc(100% - 50px);
+    list-style: none;
+    color: #000;
+    position: relative;
+}
+
+.recados .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+.recados .info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    max-width: 60%;
+}
+
+.nome-usuario {
+    font-weight: bold;
+    font-size: 1.3em;
+    color: #000;
+}
+
+.email-usuario, .id-msg {
+    font-weight: normal;
+    font-size: 0.85em;
+    color: #555555;
+}
+
+.recados .acoes {
+    display: flex;
+    gap: 10px;
+}
+
+/* ===== Botões gerais ===== */
+.btn {
+    padding: 8px 16px;
+    border: 1px solid #cc0000;
+    border-radius: 20px;
+    cursor: pointer;
+    background: linear-gradient(to bottom, #ff6b6b, #cc0000);
+    color: white;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    text-align: center;
+}
+
+.btn:hover {
+    background: linear-gradient(to bottom, #cc0000, #990000);
+    box-shadow: 0 0 8px rgba(255, 0, 0, 0.5);
+    transform: scale(1.05);
+}
+
+/* ===== Mensagens ===== */
+.mensagem {
+    margin-top: 15px;
+    font-weight: normal;
+    font-size: 1em;
+    line-height: 1.4em;
+    text-align: center;
+    color: #000;
+}
+
+.mensagem em {
+    font-style: normal;
+    font-weight: bold;
+    color: #cc0000;
+}
+
+/* ===== Formulário mural ===== */
+#formulario_mural {
+    text-align: center;
+    width: calc(100% - 20px);
+    margin: 10px auto;
+    background: #FFF5F5;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px dashed #ff6b6b;
+}
+
+#formulario_mural label {
+    display: block;
+    margin-top: 10px;
+    color: #cc0000;
+    font-weight: bold;
+}
+
+#formulario_mural input[type="text"],
+#formulario_mural textarea {
+    width: 90%;
+    max-width: 300px;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ff6b6b;
+    border-radius: 5px;
+    resize: vertical;
+}
+
+#formulario_mural textarea {
+    height: 90px;
+}
+
+#formulario_mural .btn {
+    margin-top: 15px;
+}
+
+/* ===== Produtos (novo e melhorado) ===== */
+.produtos-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 15px;
+}
+
+.produto {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 0 auto;
+    width: calc(100% - 40px);
+    box-shadow: 0 4px 15px rgba(204, 0, 0, 0.15);
+    border: 1px solid #ffe0e0;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    position: relative;
+}
+
+.produto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(204, 0, 0, 0.25);
+}
+
+.produto-id {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 0.8em;
+    color: #666;
+    background: rgba(255,255,255,0.8);
+    padding: 2px 5px;
+    border-radius: 3px;
+    z-index: 1;
+}
+
+/* Cabeçalho do card */
+.produto-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.produto-header h2 {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #cc0000;
+    margin: 0;
+}
+
+.produto-header span {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #009933;
+    background: #eaffea;
+    padding: 5px 12px;
+    border-radius: 8px;
+    border: 1px solid #b5e6b5;
+}
+
+/* Imagem centralizada */
+.produto img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin: 0 auto;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.produto img:hover {
+    transform: scale(1.05);
+}
+
+/* Descrição */
+.produto .descricao {
+    font-size: 0.95em;
+    color: #444;
+    line-height: 1.4em;
+    text-align: justify;
+}
+
+/* Ações */
+.produto .acoes {
+    display: flex;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.produto .acoes a,
+.produto .acoes input[type="submit"] {
+    flex: 1;
+    text-align: center;
+}
+
+/* Formulário de edição */
+.produto form {
+    margin-top: 15px;
+    background: #fff0f0;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px dashed #ff6b6b;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.produto form input[type="text"],
+.produto form input[type="number"],
+.produto form textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ff6b6b;
+    border-radius: 6px;
+    font-size: 0.9em;
+}
+
+.produto form textarea {
+    min-height: 70px;
+    resize: vertical;
+}
+
+
+/* ===== Responsividade ===== */
+@media screen and (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    
+    #header {
+        height: auto;
+        padding: 15px;
+        text-align: center;
+    }
+    
+    #header h1 {
+        font-size: 16px;
+    }
+    
+    #header p {
+        font-size: 12px;
+    }
+    
+    .recados, #formulario_mural, .produto {
+        width: calc(100% - 20px);
+    }
+
+    .recados .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .recados .info {
+        max-width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    * {
+        font-size: 90%;
+    }
+    
+    #header h1 {
+        font-size: 15px;
+    }
+    
+    .btn {
+        padding: 8px 16px;
+    }
+}
